@@ -47,7 +47,7 @@ ol {
 
 .content__list {
   height: 300px;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -94,7 +94,7 @@ ol {
 .search-form__fieldset-title {
   margin-bottom: 5px;
   color: #fff;
-  font-family: Fira Sans Condensed, serif;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: normal;
@@ -102,7 +102,7 @@ ol {
 
 .title {
   color: #fff;
-  font-family: Oswald, serif;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -117,11 +117,12 @@ ol {
 .content__card-link {
   color: #fff;
   text-decoration: none;
+  display: block;
 }
 
 .content__video-card-title {
   color: #FFF;
-  font-family: Oswald;
+  font-family: Oswald sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -132,7 +133,7 @@ ol {
 
 .content__video-card-description {
   color: #FFF;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -175,7 +176,7 @@ ol {
   border-left: none;
   padding: 2.5px 14px 2.5px 0;
   color: rgba(255, 255, 255, 0.7);
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: normal;
@@ -184,7 +185,7 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 30px;
+  gap: 15px;
 }
 
 .search-form__pseudo-checkbox {
@@ -195,19 +196,11 @@ ol {
   border: 1px solid #fff;
 }
 
-/*.search-form__pseudo-checkbox:active {*/
-/*  display: flex;*/
-/*  width: 15px;*/
-/*  height: 15px;*/
-/*  margin-right: 5px;*/
-/*  background-color: #fff;*/
-/*}*/
-
 .button {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: normal;
@@ -225,9 +218,8 @@ ol {
   height: 34px;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: "";
-  display: none;
   width: 15px;
   height: 15px;
   margin: auto;
@@ -244,19 +236,39 @@ ol {
 }
 
 .search-form__textfield:active {
-  outline-offset: -1px;
+  border: none;
   outline: 1px solid #fff;
+  outline-offset: -1px;
 }
 
 .content__card-link:focus {
-  outline: 0;
+  outline: 3px;
 }
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 1px;
+  outline-offset: -1px;
 }
 
-.content__card-link:active {
+.button:active {
   background: #545050;
 }
+
+.button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link_current {
+  background: #545050;
+}
+
