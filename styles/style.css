@@ -43,6 +43,7 @@ ol {
   gap: 30px;
   margin: auto;
   align-items: end;
+  width: 1140px;
 }
 
 .content__list {
@@ -57,8 +58,7 @@ ol {
 }
 
 .content__details {
-  width: 100%;
-  height: 100%;
+  flex-grow: 1;
 }
 
 .result__video-container {
@@ -71,6 +71,7 @@ ol {
 .result__video {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .content__list-item:not(:last-child) {
@@ -122,7 +123,7 @@ ol {
 
 .content__video-card-title {
   color: #FFF;
-  font-family: Oswald sans-serif;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -133,7 +134,7 @@ ol {
 
 .content__video-card-description {
   color: #FFF;
-  font-family: Fira Sans Condensed sans-serif;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -176,7 +177,7 @@ ol {
   border-left: none;
   padding: 2.5px 14px 2.5px 0;
   color: rgba(255, 255, 255, 0.7);
-  font-family: Fira Sans Condensed sans-serif;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: normal;
@@ -200,7 +201,7 @@ ol {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
-  font-family: Fira Sans Condensed sans-serif;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: normal;
@@ -237,13 +238,17 @@ ol {
 
 .search-form__textfield:active {
   border: none;
-  outline: 1px solid #fff;
-  outline-offset: -1px;
+  outline: 0;
 }
 
 .content__card-link:focus {
   outline: 3px;
 }
+
+.content__card-link:active {
+  background: #545050;
+}
+
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
@@ -259,7 +264,16 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label-text:hover {
+.button:focus {
+  outline: 0;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   cursor: pointer;
 }
