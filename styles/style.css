@@ -50,6 +50,7 @@ ol {
   height: 300px;
   overflow-y: auto;
   position: relative;
+  padding: 3px;
 }
 
 .search-form {
@@ -225,6 +226,10 @@ ol {
   height: 15px;
   margin: auto;
   background-color: #fff;
+}
+
+.search-form__pseudo-checkbox:hover {
+  cursor: pointer;
 }
 
 .search-form__textfield:focus {
